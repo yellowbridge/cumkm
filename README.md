@@ -4,6 +4,7 @@ make cumulative curve for two event at the same time
 ![img](https://github.com/yellowbridge/cumkm/blob/master/2018-06-27_150625.png)
 
 Example:
+```R
 library(survival)
 data("colon")
 sfit1 <- survfit(Surv(time,status)~rx, data=colon)
@@ -19,3 +20,4 @@ cumkm(
   xlab = 'Time from randomization',
   ylab = 'Cumulative incidence (%)'
 )
+```
