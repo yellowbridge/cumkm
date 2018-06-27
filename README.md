@@ -6,6 +6,8 @@ make cumulative curve for two event at the same time
 Example:
 ```R
 library(survival)
+library(ggplot2)
+library(grid)
 data("colon")
 sfit1 <- survfit(Surv(time,status)~rx, data=colon)
 sfit2 <- survfit(Surv(time,surg)~rx, data=colon)
