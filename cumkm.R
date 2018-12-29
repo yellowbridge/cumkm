@@ -131,19 +131,4 @@ cumkm <- function(sfit1,
   )
 }
 
-#--------------------------------------------------------------#
-library(survival)
-data("colon")
-sfit1 <- survfit(Surv(time,status)~rx, data=colon)
-sfit2 <- survfit(Surv(time,surg)~rx, data=colon)
 
-cumkm(
-  sfit1=sfit1,
-  sfit2=sfit2,
-  legend.position = c(0.15, 0.8),
-  event.level=c('Death','Surgery'),
-  left.right=c('Control group','Interv group'),
-  main = 'Cumulative incidence of Death and Surgery',
-  xlab = 'Time from randomization',
-  ylab = 'Cumulative incidence (%)'
-)
